@@ -1,0 +1,64 @@
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>神奇卡簿啦 — 卡簿</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/papaparse.min.js"> </script>
+</head>
+
+<body class="gallery-page">
+    <div id="main-content">
+        <button id="info-btn" onclick="window.location.href='staffing.html'">
+            <img src="./assets/buttons/team.PNG" alt="团队" />
+        </button>
+
+        <div id="main-container">
+            <h2 style="padding: 3rem 0 0 0;">神奇卡簿啦</h2>
+            <div id="scroll-container">
+                <div id="user-gallery"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card Modal -->
+    <div id="card-modal" class="modal" style="display: none;">
+        <div class="card-modal-wrapper">
+            <div id="card-info-overlay" class="card-info-overlay" style="display: none;"></div>  
+        </div>
+    </div>
+    <div id="modal-backdrop" class="modal-backdrop" style="display: none;"></div>
+
+    <!-- QR Code Button -->
+    <button id="qr-btn" style="
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 6px 12px;
+            font-size: 14px;
+            color: #ffffff;
+            cursor: pointer;
+            z-index: 1000;
+        ">
+        遇到问题？
+    </button>
+    
+    
+    <!-- QR Code Modal -->
+    <div id="qr-modal" class="modal"
+        style="display:none; position: fixed; inset: 0; background-color: rgba(0,0,0,0.7); z-index: 1000; align-items: center; justify-content: center;">
+        <div style="position: relative;">
+            <img src="./assets/答疑群.png" alt="答疑群" style="max-width: 80vw; max-height: 80vh; border-radius: 8px;" />
+            <button id="qr-close"
+                style="position: absolute; top: -10px; right: -10px; background: white; border-radius: 50%; border: none; width: 24px; height: 24px; cursor: pointer;">×</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/gallery.js"></script>
+</body>
+
+</html>
